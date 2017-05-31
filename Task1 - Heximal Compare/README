@@ -6,8 +6,23 @@ It needs to check if the heximal record contains equal digits.
 If the digits are equal it retunrs - > YES.
 If the digits are not equal it returns - > NO.
 --------------------------------------------------------------
+Structure
+--------------------------------------------------------------
 The structure of the project contains a header function where
 we are setting which methods are we going to use.
 In the src folder we have a funtion file where all the methods
 are initialized and a main - the starting point of the program.
 --------------------------------------------------------------
+Bugs
+--------------------------------------------------------------
+1 - add missing libraries in main.c and functions.s
+2 - memory overflow - see all the malloc functions and fix the
+memory allocation.
+3 - the program can read number greater than 2^32.
+4 - fix checkNumber function. The integer num can't be larger
+than 0x7fffffff.
+5 - fix memory allocation for heximalNum.
+6 - fix compareHex function. There is a problem with srtlen
+function, check the two for statements.
+7 - This program needs to check if all the hex numbers are equal,
+not only two of them.
