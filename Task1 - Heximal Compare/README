@@ -1,0 +1,13 @@
+--------------------------------------------------------------
+Task 1
+--------------------------------------------------------------
+The program needs to read a whole number between 0 and 2^32.
+It needs to check if the heximal record contains equal digits.
+If the digits are equal it retunrs - > YES.
+If the digits are not equal it returns - > NO.
+--------------------------------------------------------------
+The structure of the project contains a header function where
+we are setting which methods are we going to use.
+In the src folder we have a funtion file where all the methods
+are initialized and a main - the starting point of the program.
+--------------------------------------------------------------
