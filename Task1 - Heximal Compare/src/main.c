@@ -4,11 +4,12 @@
  *
  * main.c
  *
- *  Created on: 30.05.2017 Ð³.
+ *  Created on: 30.05.2017 ã.
  *      Author: justbobi
  */
 
 #include <stdio.h>
+#include "../headers/functions.h"
 
 /*
  * Starting point of the program
@@ -16,8 +17,6 @@
  */
 int main () {
 	setbuf(stdout, NULL);
-	char *heximalNum;
-	heximalNum = (char*)malloc(sizeof(int));
 
 	printf("Enter a whole number between 0 and 2^32 : ");
 	int validDecimal = checkNumber();
@@ -25,8 +24,7 @@ int main () {
 	if (validDecimal == 0) {
 		printf("Your input value is incorrect!\n");
 	} else {
-		heximalNum = convertHex(validDecimal);
-		compareHex(heximalNum);
+		compareHex(convertHex(validDecimal));
 	}
 
 	return 0;

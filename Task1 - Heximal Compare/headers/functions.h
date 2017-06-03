@@ -3,9 +3,10 @@
  *
  * functions.h
  *
- *  Created on: 30.05.2017 Ð³.
+ *  Created on: 30.05.2017 ã.
  *      Author: justbobi
  */
+
 
 /*
  * Checks if the input value is a whole number
@@ -16,7 +17,7 @@ extern int checkNumber();
 /*
  * Converts decimal numbers into heximal
  */
-extern char *convertHex(int decimalNum);
+extern char *convertHex(unsigned long int decimalNum);
 
 /*
  * Compares heximal numbers and prints results
@@ -24,3 +25,8 @@ extern char *convertHex(int decimalNum);
  * Else it prints No
  */
 extern void compareHex(char *heximalNum);
+
+/*
+ * Inner function for checking if all array elements are equal
+ */
+extern int checkArray(char *arr, int n);
