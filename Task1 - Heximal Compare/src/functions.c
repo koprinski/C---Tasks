@@ -18,13 +18,13 @@
  * and is it between 0 and 2^32.
  * return - integer number
  */
-int checkNumber() {
-	unsigned long int num, inputValue;
+long long checkNumber() {
+	long long num, inputValue;
 	char term;
-	// I need to find a answer for 4294967296 ++ numbers
-	inputValue = scanf("%lu%c", &num, &term);
 
-	if(inputValue != 2 || term != '\n' || num < 0 || num > pow(2,32)) {
+	inputValue = scanf("%lli%c", &num, &term);
+
+	if(inputValue != 2 || term != '\n' || num < 0 || num >= pow(2,32)) {
 		return 0;
 	}
 	else {
@@ -36,33 +36,36 @@ int checkNumber() {
  * Converts decimal numbers into heximal
  * return - char of heximal number
  */
-char *convertHex(unsigned long int decimalNum) {
-	unsigned long int quotient, remainder;
+char *convertHex(long long decimalNum) {
+	long long quotient, remainder;
 	int i,j = 0;
-
+	int n = 0;
 	char *heximalNum;
-	heximalNum = malloc(3600000); //3600000 ; 2^32 - needs 4 GB
-	//char heximalNum[100];
-
 	quotient = decimalNum;
 
+	while (decimalNum != 0) {
+		decimalNum = decimalNum / 16;
+		n++;
+	}
+	heximalNum = malloc((n*4) + 1);
+
 	while (quotient != 0) {
-
-
 		remainder = quotient % 16;
 		if (remainder < 10) {
 			remainder = 48 + remainder;
 		} else {
 			remainder = 55 + remainder;
 		}
-		heximalNum[j++]= remainder;
+
+		heximalNum[j++] = remainder;
 		quotient = quotient / 16;
 	}
+	heximalNum[j] = '\0';
 
 
 	// display heximal value
 	printf("Hex - > ");
-	for (i = j; i >= 0; i--) {
+	for (i = j-1; i >= 0; i--) {
 		printf("%c", heximalNum[i]);
 	}
 

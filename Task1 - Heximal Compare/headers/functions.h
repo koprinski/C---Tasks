@@ -12,12 +12,12 @@
  * Checks if the input value is a whole number
  * and is it between 0 and 2^32.
  */
-extern int checkNumber();
+extern long long checkNumber();
 
 /*
  * Converts decimal numbers into heximal
  */
-extern char *convertHex(unsigned long int decimalNum);
+extern char *convertHex(long long decimalNum);
 
 /*
  * Compares heximal numbers and prints results

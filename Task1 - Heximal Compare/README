@@ -30,9 +30,8 @@ not only two of them.
 Fixed
 1 - Fixed
 2 - Fixed
-3 - It still can read numbers more than 2^32.
+3 - Fixed
 4 - Fixed
-5 - Fixed with static value. There is still a problem i want to
-solve it with a dinamic memory allocation.
+5 - Fixed
 6 - Fixed
 7 - Fixed

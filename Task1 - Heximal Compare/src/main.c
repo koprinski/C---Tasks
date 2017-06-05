@@ -19,7 +19,7 @@ int main () {
 	setbuf(stdout, NULL);
 
 	printf("Enter a whole number between 0 and 2^32 : ");
-	int validDecimal = checkNumber();
+	long long validDecimal = checkNumber();
 
 	if (validDecimal == 0) {
 		printf("Your input value is incorrect!\n");
