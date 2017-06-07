@@ -1,0 +1,13 @@
+--------------------------------------------------------------
+Task 1
+--------------------------------------------------------------
+The program needs to simulate a 4 bit calculator, which works
+only with whole numbers from 0 to 15. The standard input needs
+to be in this order: <digit> <operator> <digit>. The program
+needs to work with the following operators: +,-,*,/,%.
+--------------------------------------------------------------
+The structure of the project contains a header function where
+we are setting which methods we are going to use.
+In the src folder we have a funtion file where all the methods
+are initialized and a main - the starting point of the program.
+--------------------------------------------------------------
