@@ -32,8 +32,6 @@ void checkNumber() {
 		if (1 == sscanf(line, "%[^\n]%*c", option)) {
 			copy = strdup(option);
 			if (strlen(option) < 6) {
-
-
 				token = strtok(option , "-,+,*,/,%");
 
 				while( token != NULL ) {
