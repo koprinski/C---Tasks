@@ -3,7 +3,7 @@
  *
  * functions.c
  *
- *  Created on: 3.06.2017 Ð³.
+ *  Created on: 3.06.2017 ã.
  *      Author: justbobi
  */
 
@@ -30,9 +30,10 @@ void checkNumber() {
 
 	if(fgets(line, sizeof(line), stdin)) {
 		if (1 == sscanf(line, "%[^\n]%*c", option)) {
+			copy = strdup(option);
 			if (strlen(option) < 6) {
 
-				copy = strdup(option);
+
 				token = strtok(option , "-,+,*,/,%");
 
 				while( token != NULL ) {
@@ -45,8 +46,6 @@ void checkNumber() {
 				if (i != 2) {
 					fprintf(stderr, "ERROR: Please enter your values correctly!");
 				} else {
-					//firstNumber = atoi(numbers[0]);
-					//secondNumber = atoi(numbers[1]);
 
 					firstNumber = (int) strtol(numbers[0], &err1, 10);
 					secondNumber = (int) strtol(numbers[1], &err2, 10);
@@ -57,9 +56,6 @@ void checkNumber() {
 
 						calculate(firstNumber, secondNumber, operator);
 
-						if (copy != NULL) {
-							free(copy);
-						}
 					} else {
 						fprintf(stderr, "ERROR: Please enter your values correctly!");
 					}
@@ -67,10 +63,14 @@ void checkNumber() {
 			} else {
 				fprintf(stderr, "ERROR: Your input is too long. Please enter your values correctly!");
 			}
+
+			if (copy != NULL) {
+				free(copy);
+			}
 		} else {
 			fprintf(stderr, "ERROR: You can't enter blank space. Please enter your values correctly!");
 		}
-	 }
+	}
 }
 
 /*
@@ -101,7 +101,6 @@ void calculate(int firstNumber, int secondNumber, char operator) {
 				result = firstNumber / secondNumber;
 			} else {
 				flag = 1;
-				//printf("Division by zero!");
 				fprintf(stderr, "ERROR: Division by zero!");
 			}
 			break;
@@ -110,12 +109,10 @@ void calculate(int firstNumber, int secondNumber, char operator) {
 				result = firstNumber % secondNumber;
 			} else {
 				flag = 1;
-				//printf("Division by zero!");
 				fprintf(stderr, "ERROR: Division by zero!");
 			}
 			break;
 		default:
-			//printf("Please write a correct operator!");
 			fprintf(stderr, "ERROR: Please write a correct operator!");
 	}
 
