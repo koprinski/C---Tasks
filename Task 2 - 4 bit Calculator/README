@@ -11,3 +11,11 @@ we are setting which methods we are going to use.
 In the src folder we have a funtion file where all the methods
 are initialized and a main - the starting point of the program.
 --------------------------------------------------------------
+Bugs
+--------------------------------------------------------------
+1 - Memory overflow in checkNumber() function. free the strdup
+method in the correct place.
+2 - Correction for the overflow if the numbers aren't in the
+specified range. firstNumber = firstNumber - 16; This is not
+correct -> change it with firstNumber &= 0x0F; why?
+3 - Read the documentation for sscanf.
