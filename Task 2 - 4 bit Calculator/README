@@ -19,3 +19,8 @@ method in the correct place.
 specified range. firstNumber = firstNumber - 16; This is not
 correct -> change it with firstNumber &= 0x0F; why?
 3 - Read the documentation for sscanf.
+--------------------------------------------------------------
+Fixed Bugs
+--------------------------------------------------------------
+1 - Fixed
+2 - Fixed
