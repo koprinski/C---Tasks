@@ -3,7 +3,7 @@
  *
  * functions.c
  *
- *  Created on: 3.06.2017 ã.
+ *  Created on: 3.06.2017 Ã£.
  *      Author: justbobi
  */
 
@@ -77,11 +77,11 @@ void checkNumber() {
 void calculate(int firstNumber, int secondNumber, char operator) {
 	int result, flag = 0;
 
-	if (firstNumber > 16) {
-		firstNumber = firstNumber - 16;
+	if (firstNumber > 0x0F) {
+		firstNumber &= 0x0F;
 	}
-	if (secondNumber > 16) {
-		secondNumber = secondNumber - 16;
+	if (secondNumber > 0x0F) {
+		secondNumber &= 0x0F;
 	}
 
 	switch (operator) {
@@ -114,10 +114,10 @@ void calculate(int firstNumber, int secondNumber, char operator) {
 			fprintf(stderr, "ERROR: Please write a correct operator!");
 	}
 
-	if (result > 16) {
-		result = result - 16;
+	if (result > 0x0F) {
+		result &= 0x0F;
 	} else if (result < 0) {
-		result = 16 + result;
+		result &= 0x0F;
 	}
 	if (flag != 1) {
 		printf("\nresult : %d", result);
