@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Created on: 12.06.2017 Ð³.
+ *  Created on: 12.06.2017 ã.
  *      Author: justbobi
  */
 
@@ -15,7 +15,7 @@ int main() {
 	correctStr(str);
 
 	//Reverse hex Ex2
-	unsigned int numb = 0xabcd;
+	unsigned int numb = 1234567;
 	printReverse(numb);
 
 	//Print matrix Ex3

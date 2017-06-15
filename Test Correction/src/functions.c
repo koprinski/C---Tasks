@@ -1,7 +1,7 @@
 /*
  * functions.c
  *
- *  Created on: 12.06.2017 Ð³.
+ *  Created on: 12.06.2017 ã.
  *      Author: justbobi
  */
 #include <stdio.h>
@@ -30,15 +30,16 @@ void correctStr(char *str) {
  * It uses the mask 0xff
  */
 void printReverse (unsigned int num) {
-	unsigned int swapped;
+	int reversedNumber = 0, remainder = 0;
 
-	// for 32 bit numbers with mask 0xff for hexadecimal format
-	swapped = ((num>>24)&0xff) | // move byte 3 to byte 0
-			((num<<8)&0xff0000) | // move byte 1 to byte 2
-			((num>>8)&0xff00) | // move byte 2 to byte 1
-			((num<<24)&0xff000000); // byte 0 to byte 3
+	while (num != 0) {
+		remainder = num % 10;
+		reversedNumber = reversedNumber * 10 + remainder;
+		num /= 10;
 
-	printf("Exercise 2 - %x\n", swapped);
+	}
+
+	printf("Exercise 2 - %d\n", reversedNumber);
 	printf("------------------------\n");
 
 }
@@ -53,9 +54,7 @@ void printMatrix(int *arr, int size, int n) {
 
 	for (i=0; i<20; i++) {
 		for(j=0; j<20; j++) {
-			if (k > size) {
-				k=0;
-			}
+			k %= size;
 			existArray[i][j] = arr[k++];
 		}
 	}
