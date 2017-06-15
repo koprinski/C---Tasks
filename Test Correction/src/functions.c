@@ -29,19 +29,15 @@ void correctStr(char *str) {
  * Ex 2. Function that moves bits of 32 bit numbers.
  * It uses the mask 0xff
  */
-void printReverse (unsigned int num) {
-	int reversedNumber = 0, remainder = 0;
+void printReverse (unsigned int num, int numLen) {
+	int i;
 
-	while (num != 0) {
-		remainder = num % 10;
-		reversedNumber = reversedNumber * 10 + remainder;
-		num /= 10;
-
+	printf("Exercise 2 - 0x");
+	for(i=0; i<numLen; i++) {
+		printf("%X", (num >> (i*4)) & 0x0F);
 	}
 
-	printf("Exercise 2 - %d\n", reversedNumber);
-	printf("------------------------\n");
-
+	printf("\n------------------------\n");
 }
 
 /*

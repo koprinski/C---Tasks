@@ -15,8 +15,9 @@ int main() {
 	correctStr(str);
 
 	//Reverse hex Ex2
-	unsigned int numb = 1234567;
-	printReverse(numb);
+	unsigned int numb = 0x1234567;
+	int numLen = 7;
+	printReverse(numb, numLen);
 
 	//Print matrix Ex3
 	int arr[6] = {1,2,3,4,5,6};

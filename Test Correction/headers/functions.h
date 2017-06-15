@@ -1,7 +1,7 @@
 /*
  * functions.h
  *
- *  Created on: 12.06.2017 Ð³.
+ *  Created on: 12.06.2017 ã.
  *      Author: justbobi
  */
 
@@ -13,7 +13,7 @@ extern void correctStr(char *str);
 /*
  * Ex 2. Function that moves bits of 32 bit numbers.
  */
-extern void printReverse (unsigned int num);
+extern void printReverse (unsigned int num, int numLen);
 
 /*
  * Ex 3. Function that prints another matrix with specified sizes.
