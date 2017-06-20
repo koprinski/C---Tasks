@@ -1,0 +1,8 @@
+--------------------------------------------------------------
+Task 3
+--------------------------------------------------------------
+The program needs to print a pattern: 1, 121, 1213121, ...
+The first number needs to be 1. The following are two copies
+of the first number, between whom is written the current
+number. The program input needs to be a number between 0 and 20.
+--------------------------------------------------------------
